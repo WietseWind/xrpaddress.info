@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+now --target production

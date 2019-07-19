@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>XRPL Address Encoding</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="https://kit.fontawesome.com/708e44aac4.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<!--================Header Menu Area =================-->
+	<header class="header_area navbar_fixed">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h font" href="#">
+						<img width="50" src="img/logo.png" alt="" class="ml-2 float-left mr-2"> 
+						<span class="h4 pt-3"><b class="d-block mt-2">XRPL Address Encoding</b></span>
+					</a>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-end">
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="#whatwhy">What &amp; Why</a></li>
+							<li class="nav-item"><a class="nav-link" href="#implementation">Implementation</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================Header Menu Area =================-->
+
+	<!--================Home =================-->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="banner_content">
+							<div class="d-block my-5 py-5 d-lg-none"></div>
+							<h2 class="font">
+								XRPL Address <br>
+								Encoding Proposal
+							</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua. Ut enim ad minim.
+								sed do eiusmod tempor incididunt.
+							</p>
+							<div class="row">
+								<div class="col-6">
+									<a class="btn-block primary_btn" href="#whatwhy"><span>Read more</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7" style="height: 624px">
+						<div class="my-5 py-5"></div>
+							<div class="card" style="position: absolute; width: 100%;">
+								<div class="card-header window">
+									<div class="column float-left">
+										<span class="dot" style="background:#ED594A;"></span>
+										<span class="dot" style="background:#FDD800;"></span>
+										<span class="dot" style="background:#5AC05A;"></span>
+									</div>
+									<div class="column float-right pt-0">
+										<a class="d-block" style="margin-top: -2px;" target="_blank" href="https://npmjs.org/package/xrpl-tagged-address-codec"><img alt="npm" src="https://img.shields.io/npm/v/xrpl-tagged-address-codec.svg" style="max-width:100%;"></a>
+									</div>
+								</div>
+								<div class="card-body pb-1">
+									<h5 class="card-title">Try it yourself</h5>
+									<h6 class="card-subtitle mb-2 text-muted">Encode/decode from &amp; to all proposed formats.</h6>
+									<div class="card-text">
+										You can use a normal XRPL account with tag by appending a colon and the tag to the address:
+										<div onclick="convert('rPEPPER7kfTD9w2To4CQk6UCfuHM9c6GDY:12345')" class="pointer badge bg-light hover border mono text-primary font-weight-normal">rPEPPER7kfTD9w2To4CQk6UCfuHM9c6GDY:12345</div>
+									</div>
+									<div class="pb-2 mt-4">
+										<div class="input-group">
+										<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="addr" type="text" class="mono form-control font" placeholder="Address to encode/decode">
+											<div class="input-group-append">
+												<button id="convert" class="btn btn-primary" type="button">
+													<i class="fa fa-arrow-right"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div id="err" style="display: none;" class="mt-2 alert alert-danger text-center">...</div>
+									<div id="warn" class="alert mt-2 alert-secondary text-center bg-light text-muted">
+										<i class="fas fa-arrow-up"></i>
+										Please enter an address and click the button...
+									</div>
+									<div id="results" style="display: none;">
+										<pre class="mt-2 results text-secondary mono">...</pre>
+										<a href="#spin" class="mb-2 btn btn-sm btn-outline-success btn-block"><i class="fa fa-code"></i> Try it yourself using Javascript code</a>
+									</div>
+									<!--
+										<a href="#" class="card-link"><i class="fab fa-npm"></i> NPM</a>
+										<a href="#" class="card-link"><i class="fa fa-github"></i> Github</a>
+									-->
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home =================-->
+
+	<!--================WhatWhy =================-->
+	<a name="whatwhy"></a>
+	<section class="section_gap features_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<!-- <p class="top_title">A new format for Account Addresses and Destination Tags</p> -->
+						<h2>What &amp; Why</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-top">
+				<div class="col-3 col-md-5 text-center">
+					<div class="left_features">
+						<img class="img-fluid" src="img/f-img2.png" alt="">
+					</div>
+				</div>
+				<div class="col-8 col-md-6 offset-md-1">
+					<div class="single_feature">
+						<div class="feature_head">
+							<span class="lnr lnr-screen"></span>
+							<h4 class="font"><b>Shared accounts</b></h4>
+						</div>
+						<div class="feature_content">
+							<p>Some description.</p>
+						</div>
+					</div>
+
+					<div class="single_feature">
+						<div class="feature_head">
+							<span class="lnr lnr-screen"></span>
+							<h4 class="font"><b>Destination tags</b></h4>
+						</div>
+						<div class="feature_content">
+							<p>Some description.</p>
+						</div>
+					</div>
+
+					<div class="single_feature">
+						<div class="feature_head">
+							<span class="lnr lnr-screen"></span>
+							<h4 class="font"><b>Improvement</b></h4>
+						</div>
+						<div class="feature_content">
+							<p>
+								Some description.
+								More info at
+								<a href="https://github.com/xrp-community/xrpl-tagged-address-codec#readme" target="_blank">
+									<i class="fa fa-github"></i> Github
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Features Area =================-->
+
+	<!--================Implementation =================-->
+	<a name="implementation"></a>
+	<section class="impress_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2 class="text-white">Implementation</h2>
+						<h4 class="text-white font">For Devs and Exchanges</h4>
+						<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-top">
+				<div class="col-3 col-md-5 text-center">
+					<div class="left_features">
+						<img class="img-fluid" src="img/f-img1.png" alt="">
+					</div>
+				</div>
+				<div class="col-8 col-md-6 offset-md-1 text-white">
+					<div class="single_feature">
+						<div class="feature_head">
+							<span class="lnr lnr-screen"></span>
+							<h4 class="font"><b>Apps sending XRP</b></h4>
+						</div>
+						<div class="feature_content">
+							<p>Some description.</p>
+						</div>
+					</div>
+
+					<div class="single_feature">
+						<div class="feature_head">
+							<span class="lnr lnr-screen"></span>
+							<h4 class="font"><b>Apps receiving XRP</b></h4>
+						</div>
+						<div class="feature_content">
+							<p>Some description.</p>
+						</div>
+					</div>
+
+					<div class="single_feature">
+						<div class="feature_head">
+							<span class="lnr lnr-screen"></span>
+							<h4 class="font"><b>Best practice</b></h4>
+						</div>
+						<div class="feature_content">
+							<p>Some description.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================Implementation =================-->
+
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row footer_inner" style="margin-top: -25px;">
+				<div class="d-none d-lg-block" style="margin-top: -120px;"></div>
+				<div class="col-12 col-lg-2"></div>
+				<a name="spin"></a>
+				<div class="col-12 col-lg-8 text-center">
+					<h3 class="font"><b>Give the codec a spin</b></h3>
+					<script src="https://embed.runkit.com" data-element-id="try" data-minHeight="200" data-title="XRPL Address Codec"></script>
+
+					<div id="try">const {Encode, Decode} = require('xrpl-tagged-address-codec')
+
+const tagged = Encode({ account: 'rPEPPER7kfTD9w2To4CQk6UCfuHM9c6GDY', tag: 495 })
+console.log(tagged)
+
+const untagged = Decode(tagged)
+console.log(untagged)
+</div
+				</div>
+				<div class="col-12">
+					<aside class="f_widget ab_widget text-center pt-5">
+						<h3 class="font">About</h3>
+						<p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into
+							improving your skills,</p>
+						<p>
+							<small>This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
+						</p>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+	<script src="js/xrpl-tagged-address-codec-browser.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

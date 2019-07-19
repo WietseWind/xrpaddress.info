@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "alias": ["www.xrpaddress.info", "www.xrpaddress.com", "xrpaddress.com"],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://xrpaddress.info/$1" }
+    }
+  ]
+}
