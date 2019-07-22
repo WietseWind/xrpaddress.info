@@ -8,10 +8,16 @@ module.exports = async (req, res) => {
     if (req.query.address.match(/^X/)) {
       res.status(200).json(Decode(req.query.address))
     } else {
-      assert(req.query.tag, 'Invalid destination tag')
-      assert(!isNaN(parseInt(req.query.tag)), 'Destination tag is not numeric')
-      assert((parseInt(req.query.tag) + '') === req.query.tag.trim(), 'Destination tag not numeric')
-      res.status(200).json({address: Encode({account: req.query.address, tag: req.query.tag})})
+      let tag
+      if (req.query.tag === '') {
+        tag = null
+      } else {
+        tag = req.query.tag
+        assert(req.query.tag, 'Invalid destination tag')
+        assert(!isNaN(parseInt(req.query.tag)), 'Destination tag is not numeric')
+        assert((parseInt(req.query.tag) + '') === req.query.tag.trim(), 'Destination tag not numeric')
+      }
+      res.status(200).json({address: Encode({account: req.query.address, tag})})
     }
   } catch (e) {
     res.status(500).json({

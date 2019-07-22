@@ -12,6 +12,13 @@
             }
         },
         { 
+            "src": "/api/encode/(?<address>[^/]+)/*.*", 
+            "dest": "/api/index.js?address=$address&tag=",
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
             "src": "/api/decode/(?<address>[^/]+)/*.*",
             "dest": "/api/index.js?address=$address",
             "headers": {
