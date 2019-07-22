@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "xrpl-tagged-address-codec": "^0.2.0"
+  }
+}

@@ -1,1 +1,22 @@
-{ "version": 2, "alias": "xrpaddress.info" }
+{ 
+    "version": 2,
+    "name": "XRPL X-Address",
+    "regions": ["all"],
+    "alias": "xrpaddress.info",
+    "routes": [
+        { 
+            "src": "/api/encode/(?<address>[^/]+)/(?<tag>[^/]+)/*.*", 
+            "dest": "/api/index.js?address=$address&tag=$tag",
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
+            "src": "/api/decode/(?<address>[^/]+)/*.*",
+            "dest": "/api/index.js?address=$address",
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+            }
+        }
+    ]
+}
