@@ -36,7 +36,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item x-active"><a class="nav-link" href="index.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="#whatwhy">What &amp; Why</a></li>
 							<li class="nav-item"><a class="nav-link" href="#implementation">Implementation</a></li>
 						</ul>
@@ -86,7 +86,7 @@
 								</div>
 								<div class="card-body pb-1">
 									<h5 class="card-title">Try it yourself</h5>
-									<h6 class="card-subtitle mb-2 text-muted">Encode and decode normal addresses with tags and <code class="font text-primary h6 d-inline"><b>X</b></code>-addresses.</h6>
+									<h6 class="card-subtitle mb-2 text-muted">Encode and decode normal addresses with tags and <code class="font text-theme h6 d-inline"><b>X</b></code>-addresses.</h6>
 									<div class="card-text">
 										You can use a normal XRPL account with tag by appending a colon and the tag to the address:
 										<div onclick="convert('rPEPPER7kfTD9w2To4CQk6UCfuHM9c6GDY:12345')" class="pointer badge bg-light hover border mono text-primary font-weight-normal">rPEPPER7kfTD9w2To4CQk6UCfuHM9c6GDY:12345</div>
@@ -133,8 +133,8 @@
 						<!-- <p class="top_title">A new format for Account Addresses and Destination Tags</p> -->
 						<h2>What &amp; Why</h2>
 						<p>
-							The new 𝗫-address format can replace the use of a separate address and destination tag
-							for XRP deposits. By using the 𝗫-address, it will no longer be possible to forget adding
+							The new <span class="text-theme">𝗫</span>-address format can replace the use of a separate address and destination tag
+							for XRP deposits. By using the <span class="text-theme">𝗫</span>-address, it will no longer be possible to forget adding
 							a destination tag or entering the wrong one when sending deposits to exchanges and other
 							platforms accepting XRP deposits.
 						</p>
@@ -154,7 +154,7 @@
 							<h4 class="font"><b>A new address!?</b></h4>
 						</div>
 						<div class="feature_content">
-							<p class="text-primary">
+							<p class="text-theme">
 								If you own an XRP account address (paper or hardware wallet), your address starts
 								with <code>'r...'</code> and doesn't require a destination tag for deposits.
 								<b>This <u>will not</u> change 🎉</b>
@@ -164,7 +164,7 @@
 								you'll have to enter a numeric destination tag as well. <b>That <u>will</u> change 🎉</b>
 							</p>
 							<p>
-								The new 𝗫-address format will replace the combination of an <code>'r...'</code> address in combination with a destination tag.
+								The new <span class="text-theme">𝗫</span>-address format will replace the combination of an <code>'r...'</code> address in combination with a destination tag.
 								By using one address that contains both the destination account and the destination tag, users can no longer make mistakes
 								by making mistakes entering, or omitting the destination tag.
 							</p>
@@ -178,13 +178,13 @@
 						</div>
 						<div class="feature_content">
 							<p>
-								You can easily recognize the new address because it will <b>always start</b> with an upper case 𝗫.
-								A new 𝗫-address will contain both the destination address and destination tag, and it looks like this:
-								<code class="text-primary">XV5sbjUmgPpvXv4ixFWZ5ptAYZ6PD2q1qM6owqNbug8W6KV</code>.
+								You can easily recognize the new address because it will <b>always start</b> with an upper case <span class="text-theme">𝗫</span>.
+								A new <span class="text-theme">𝗫</span>-address will contain both the destination address and destination tag, and it looks like this:
+								<code class="text-theme">XV5sbjUmgPpvXv4ixFWZ5ptAYZ6PD2q1qM6owqNbug8W6KV</code>.
 							</p>
 							<p>
 								It will take some time for all exchanges, clients, wallets, etc. to support the new address format. You will
-								probably see the old format with separate numeric destination tags, and the new 𝗫-addresses both being offered.
+								probably see the old format with separate numeric destination tags, and the new <span class="text-theme">𝗫</span>-addresses both being offered.
 								in the mean time.
 							</p>
 						</div>
@@ -244,7 +244,7 @@
 					</h4>
 					<p class="">
 						If you operate a website receiving funds from users to one address using destination tags, or if you allow users to input an address
-						for XRP/IOU withdrawals, you are very much invited to add 𝗫-address format support.
+						for XRP/IOU withdrawals, you are very much invited to add <span class="text-theme">𝗫</span>-address format support.
 					</p>
 				</div>
 				<div class="col-12 pt-2">
@@ -275,11 +275,11 @@
 									<p>
 										When users retrieve their deposit address from another
 										exchange or custodial service, they may get an
-										𝗫-address formatted address.
+										<span class="text-theme">𝗫</span>-address formatted address.
 									</p>
 									<p>
 										For a good user experience, users should be able to enter
-										both the <code>'r...'</code> address and the new 𝗫-address format. 
+										both the <code>'r...'</code> address and the new <span class="text-theme">𝗫</span>-address format. 
 									</p>
 								</div>
 							</div>
@@ -298,8 +298,8 @@
 										to add the tag when sending funds.
 									</p>
 									<p>
-										When adding the 𝗫-address formatted address, the user should be able
-										to choose which address to display: the 𝗫-address formatted address
+										When adding the <span class="text-theme">𝗫</span>-address formatted address, the user should be able
+										to choose which address to display: the <span class="text-theme">𝗫</span>-address formatted address
 										without warnings and the <code>'r...'</code> address and tag, with warnings.
 									</p>
 								</div>
@@ -313,27 +313,27 @@
 								<div class="feature_content pb-3">
 									<p>
 										Everybody (users, exchanges, wallets) will benefit from a migration
-										towards using the 𝗫-address formatted addresses, since users can no longer
+										towards using the <span class="text-theme">𝗫</span>-address formatted addresses, since users can no longer
 										make mistakes when making deposits. No more uncertainty for users, no more
 										manual funds recovery for exchanges and (custodian) wallet providers.
 									</p>
 									<p>
-										It should be really easy and clear for users that the 𝗫-address format is
+										It should be really easy and clear for users that the <span class="text-theme">𝗫</span>-address format is
 										supported, and users should be encouraged to use the new address format.
 									</p>
 									<p>
 										<b>When asking users to input a withdrawal address</b>, please support both
-										formats in one input. When an 𝗫-address is detected, remove the destination tag
+										formats in one input. When an <span class="text-theme">𝗫</span>-address is detected, remove the destination tag
 										input. When detecting an <code>'r...'</code> address and destination tag,
-										inform the user they can ask the receiving exchange/platform to add 𝗫-address format
+										inform the user they can ask the receiving exchange/platform to add <span class="text-theme">𝗫</span>-address format
 										support.
 									</p>
 									<p>
-										<b>When giving users their deposit address</b>, please give them 𝗫-address
+										<b>When giving users their deposit address</b>, please give them <span class="text-theme">𝗫</span>-address
 										formatted address first. Then add a short explanation that they can also use
 										the <code>'r...'</code> format, and show this address and destination tag.
 										Add a note to inform the user they can ask their sending app/exchange
-										to add 𝗫-address format support.
+										to add <span class="text-theme">𝗫</span>-address format support.
 									</p>
 								</div>
 							</div>

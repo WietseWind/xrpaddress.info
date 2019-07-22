@@ -563,3 +563,6 @@ pre.results {
 .hover:hover {
   text-decoration: underline !important
 }
+.text-theme {
+  color: #8252fa !important
+}
