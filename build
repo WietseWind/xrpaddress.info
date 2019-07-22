@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+rm -r ./public/*
+cp ./*.{html,js,css,txt,png,jpg,ico} public/ 2>/dev/null
+cp -r ./{js,css,img} public/

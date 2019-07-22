@@ -1,2 +1,5 @@
 .DS_Store
 /api/node_modules/
+/public/
+/yarn.lock
+/node_modules/
